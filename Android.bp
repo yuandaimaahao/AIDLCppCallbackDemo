@@ -1,0 +1,22 @@
+cc_binary {
+    name: "BinderCallbackServer",
+    srcs: ["HelloServer.cpp", "IHello.cpp","ICallback.cpp"],
+    shared_libs: [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libbinder",
+    ],
+}
+
+
+cc_binary {
+    name: "BinderCallbackClient",
+    srcs: ["HelloClient.cpp", "IHello.cpp","ICallback.cpp"],
+    shared_libs: [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libbinder",
+    ],
+}
